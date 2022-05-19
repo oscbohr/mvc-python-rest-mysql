@@ -14,7 +14,7 @@ git clone https://github.com/oscbohr/mvc-python-rest-mysql.git
 **Paso 1:** Localizarse dentro del directorio del proyecto que fue clonado:
 
 ```
-cd 
+cd mvc-python-rest-mysql-main
 ```
 
 **Paso 2:** Ejecutar el comando para la construcción de los contenedores:
