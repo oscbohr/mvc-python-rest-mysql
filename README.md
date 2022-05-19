@@ -43,7 +43,7 @@ docker exec -it meli-procesar-archivo-mysql -uroot -p
 ```
 le solicita el password el cual es: my-secret-pw
 
-y revisar que la tabla tabls "" e "" se encuentren:
+y revisar que la tabla tablas se encuentren:
 
 ```
  show tables;
