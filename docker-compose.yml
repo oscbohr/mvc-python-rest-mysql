@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  backend:
+    build: 
+      context: .
+      dockerfile: ./meli-procesar-archivo/codigo/Dockerfile
+    container_name: meli-procesar-archivo-backend
+    hostname: backend
+    network_mode: bridge
+    restart: always
+    expose:
+      - "5000"
+    ports:
+      - "5000:5000"
+    depends_on:
+      - "db"    
+    links:
+      - "db"      
+  db:
+    image: mysql:8.0.29
+    network_mode: bridge    
+    hostname: db
+    container_name:  meli-procesar-archivo-mysql    
+    restart: always
+    expose:
+      - "3306"
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    environment:
+         - MYSQL_ROOT_PASSWORD=my-secret-pw
+         - MYSQL_DATABASE=testDB
+  
+  

@@ -1,0 +1,68 @@
+*****************************************************************
+Parametros configurados  Test-1
+*****************************************************************
+40 hilos primarios
+03 hilos secundarios
+bloque = 100
+
+Porcentaje de uso de CPU :  12.8
+RAM memory % usada: 64.0
+Ram memory usada por PYTHON: 88.58203125  MB
+
+{
+    "cantidad": 2000,
+    "mensaje": "Ok",
+    "procesado": true,
+    "tiempo": 112.19562697410583
+}
+
+Porcentaje de uso de CPU :  14.0
+RAM memory % usada: 64.2
+Ram memory usada por PYTHON: 237.140625  MB
+
+
+
+*****************************************************************
+Parametros configurados  Test-2
+*****************************************************************
+100 hilos primarios
+005 hilos secundarios
+bloque = 200
+
+Porcentaje de uso de CPU :  17.6
+RAM memory % usada: 64.2
+Ram memory usada por PYTHON: 88.6640625  MB
+
+{
+    "cantidad": 2000,
+    "mensaje": "Ok",
+    "procesado": true,
+    "tiempo": 54.28878879547119
+}
+
+Porcentaje de uso de CPU :  10.9
+RAM memory % usada: 65.1
+Ram memory usada por PYTHON: 361.06640625  MB
+
+
+*****************************************************************
+Parametros configurados  Test-3
+*****************************************************************
+150 hilos primarios
+005 hilos secundarios
+bloque = 200
+
+Porcentaje de uso de CPU :  12.9
+RAM memory % usada: 64.4
+Ram memory usada por PYTHON: 88.73828125  MB
+
+{
+    "cantidad": 2000,
+    "mensaje": "Ok",
+    "procesado": true,
+    "tiempo": 51.58430457115173
+}
+
+Porcentaje de uso de CPU :  13.8
+RAM memory % usada: 66.0
+Ram memory usada por PYTHON: 412.4140625  MB
