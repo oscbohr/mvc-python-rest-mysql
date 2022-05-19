@@ -1,73 +1,87 @@
-# ddd-python-rest-mysql
-Proyecto que consiste en armar un servicio web que exponga un endpoint para leer un archivo, consultar una serie de APIs públicas y cargar una base de datos con los datos del archivo y las consultas a las APIs, construido con patrones de diseño, concurrencia y Domain Driven Design.
+# mvc-python-rest-mysql
+Proyecto que expone un API Rest  para procesar un archivo y consultar una serie de APIs de MERCADO LIBRE y cargar el resultado del proceso una base de datos con los datos del archivo inicial y el resultado de las consultas a las APIs.
 
 ### Prerequisitos
 
 **1:** Clonar el proyecto a través del cliente git o desde desde un navegador.
 ```
-git clone https://github.com/egmartin1810/ddd-python-rest-mysql.git
+git clone https://github.com/oscbohr/mvc-python-rest-mysql.git
 ```
-**2:** Tener Docker instalado de la página oficial: https://docs.docker.com/get-docker/. (instalar la última versión de Docker en su sistema operativo).
+**2:** Tener Docker instalado docker o instalar la última versión en su sistema operativo  (url: https://docs.docker.com/get-docker/)
 
 ### Instalación
 
-**Paso 1:** Estar dentro del directorio del proyecto que fue clonado:
+**Paso 1:** Localizarse dentro del directorio del proyecto que fue clonado:
 
 ```
-cd ddd-python-rest-mysql
+cd 
 ```
 
-**Paso 2:** Ejecutar los contenedores:
+**Paso 2:** Ejecutar el comando para la construcción de los contenedores:
 
 ```
 docker-compose up -d --build 
 ```
-**Paso 3:** Verificar que los contenedores estén ejecutando.
+**Paso 3:** Verificar la correcta ejecución de los contenedores.
 
 ```
 docker-compose ps -a
 ```
 
-**Paso 4:** Verificar que la aplicación subió correctamente.
+**Paso 4:** Verificar que la app haya iniciado satisfactoriamente.
 
 ```
-docker logs ddd-python-rest-mysql_app_1
+docker logs -f meli-procesar-archivo-backend
 
 ```
 
 **Paso 5:** Verificar que la Base de Datos mysql subió correctamente.
 
 ```
-docker exec -it ddd-python-rest-mysql_db_1 mysql -uroot -p
+docker exec -it meli-procesar-archivo-mysql -uroot -p
 
 ```
-le solicita el password el cual es: root
+le solicita el password el cual es: my-secret-pw
 
-y revisar que la tabla meli.item se encuentre, en la consola de mysql:
+y revisar que la tabla tabls "" e "" se encuentren:
 
 ```
- select * from meli.item;
+ show tables;
 
 ```
 
 **Paso 6:** Ejecutar el servicio rest expuesto por la aplicación creada.
 
 ```
-curl -X POST http://127.0.0.1:5000/api/v1/almacenardatositems
+PROCESAR: curl --header "Content-Type: application/json" --request POST \
+		 --data '{}' http://localhost:5000/api/v1/procesararchivo
+
+
+CONSULTAR: curl --header "Content-Type: application/json" --request GET \
+		 --data '{}' http://localhost:5000/api/v1/procesararchivo?rows=300
+ 
+ELIMINAR: curl --header "Content-Type: application/json" --request DELETE \
+		 --data '{}' http://localhost:5000/api/v1/eliminarprocesoarchivo
+			
+```
+Observacion: Para prueba inicial, se sugiere ejecutar en este orden:
+	1- POST
+	2- GET
+
+**Paso 7:** Validar la respuesta del servicio REST ingresando a la Base de Datos y realizar consultas sobre
+la tabla "ItemsProcesados" e "ItemsRechazados"
 
 ```
-
-**Paso 7:** Una vez de tener la respuesta del servicio rest, Validar que los 2000 registros estén en la tabla meli.item.
-
-```
-comando: docker exec -it ddd-python-rest-mysql_db_1 mysql -uroot -p
-password: root
-select * from meli.item; 
+comando: docker exec -it meli-procesar-archivo-mysql mysql -uroot -p
+password: my-secret-pw
+select * from ItemsProcesados;
+select * from ItemsRechazados;
 
 ```
+Nota: Si es la primera vez que se ejecuta, el *count( * ) de ItemsRechazados mas la suma con el count( * ) de ItemsProcesados* debe ser igual al total de filas del archivo.
+
 
 ## Documentación y Desafío Técnico:
 
-Por último dentro de la carpera documetnación de directorio del proyecto, podemos encontrar el documento con el detalle de la instalación de la aplicación, un documento técnico con unos diagramas muy explicativos de la solución y la respuesta del Desafío Teórico.
+Por último dentro de la carpera documetnación de directorio del proyecto, podemos encontrar el documento con el detalle de la instalacióny la resolución del Desafío Teórico.
 
-[Link-Documentación] (https://github.com/egmartin1810/ddd-python-rest-mysql/tree/master/documentaci%C3%B3n) - Documentación y Desafío Técnico.
