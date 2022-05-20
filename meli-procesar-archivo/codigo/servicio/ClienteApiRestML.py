@@ -35,7 +35,6 @@ class ClienteApiRestML(object):
         Constructor Obtiene la URLs a consultar
         '''
         try:
-            #self.__engine = create_engine(self.__config_params.get_param_db('url'))
             self.__url_primaria = self.__config_params.get_param_apiML('url_primaria')
             self.__url_secundaria = self.__config_params.get_param_apiML('url_secundarias').split(',')
         except KeyError as err:

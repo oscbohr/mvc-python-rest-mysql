@@ -61,7 +61,7 @@ class ServicioProcesarArchivo(IOperacionesServices):
                         else:
                             list_id_rechazos.append(str(row.site) + str(row.id))
                     self.__salvarRechazadosDB(list_id_rechazos)
-                    logging.info('Procesando lote de ' + str(len(list_id_procesar)) + ' registros en ' + str(self.config_params.get_param_apiML('hilos_primario')) + 'hilos ')
+                    logging.info('Procesando lote de ' + str(len(list_id_procesar)) + ' registros en ' + str(self.config_params.get_param_apiML('hilos_primario')) + ' hilos ')
                     self.__cliente_api_ml.consultarItemsML(list_id_procesar)
         except KeyError as err:
             print(f'Error {err}')

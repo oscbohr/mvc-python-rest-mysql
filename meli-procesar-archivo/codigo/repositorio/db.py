@@ -24,7 +24,6 @@ class DataSourceMySQL(object):
         '''
         Constructor
         '''
-        print('CRANDOOOOOOOOOOOOOOOOOOOOO')
         try:
             self.__engine = create_engine(self.__config_params.get_param_db('url'), pool_size = int(self.__config_params.get_param_db('pool_size')))
             self.__SessionFactory= sessionmaker(bind=self.__engine)

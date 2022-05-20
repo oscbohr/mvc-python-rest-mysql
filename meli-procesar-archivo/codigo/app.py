@@ -37,7 +37,7 @@ def procesar_archivo():
 @app.route("/api/v1/eliminarprocesoarchivo", methods=['DELETE'])
 def eliminar_proceso():
     '''
-    Procesar archivo: Permite leer el archivo y procesarlo
+    Procesar archivo: Permite Eliminar todo de las tablas
 
     curl --header "Content-Type: application/json" --request DELETE \
          --data '{}' \

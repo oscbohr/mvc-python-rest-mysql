@@ -2,10 +2,10 @@
 Parametros configurados  Test-1
 *****************************************************************
 40 hilos primarios
-03 hilos secundarios
+03 hilos secundariosss
 bloque = 100
 
-Porcentaje de uso de CPU :  12.8
+Porcentaje de uso de CPU :  12.8 
 RAM memory % usada: 64.0
 {
     "cantidad": 2000,
@@ -27,7 +27,6 @@ bloque = 200
 
 Porcentaje de uso de CPU :  17.6
 RAM memory % usada: 64.2
-
 {
     "cantidad": 2000,
     "mensaje": "Ok",
@@ -37,6 +36,7 @@ RAM memory % usada: 64.2
 
 Porcentaje de uso de CPU :  10.9
 RAM memory % usada: 65.1
+
 
 *****************************************************************
 Parametros configurados  Test-3
@@ -56,3 +56,4 @@ RAM memory % usada: 64.4
 
 Porcentaje de uso de CPU :  13.8
 RAM memory % usada: 66.0
+
