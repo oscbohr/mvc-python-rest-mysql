@@ -74,6 +74,6 @@ def consultar():
     
 
 if __name__ == '__main__':
-    logging.basicConfig(filename='challengOMBR-Loggin.log', level=logging.DEBUG, format='%(asctime)s %(message)s')
+    logging.basicConfig(filename='challengOMBR-Loggin.log', level=logging.INFO, format='%(asctime)s %(message)s')
     logging.info('Iniciando...')
     app.run( debug=True, port = 5000, host='0.0.0.0')
