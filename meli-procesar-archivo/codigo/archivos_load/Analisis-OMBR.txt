@@ -7,8 +7,6 @@ bloque = 100
 
 Porcentaje de uso de CPU :  12.8
 RAM memory % usada: 64.0
-Ram memory usada por PYTHON: 88.58203125  MB
-
 {
     "cantidad": 2000,
     "mensaje": "Ok",
@@ -18,8 +16,6 @@ Ram memory usada por PYTHON: 88.58203125  MB
 
 Porcentaje de uso de CPU :  14.0
 RAM memory % usada: 64.2
-Ram memory usada por PYTHON: 237.140625  MB
-
 
 
 *****************************************************************
@@ -31,7 +27,6 @@ bloque = 200
 
 Porcentaje de uso de CPU :  17.6
 RAM memory % usada: 64.2
-Ram memory usada por PYTHON: 88.6640625  MB
 
 {
     "cantidad": 2000,
@@ -42,8 +37,6 @@ Ram memory usada por PYTHON: 88.6640625  MB
 
 Porcentaje de uso de CPU :  10.9
 RAM memory % usada: 65.1
-Ram memory usada por PYTHON: 361.06640625  MB
-
 
 *****************************************************************
 Parametros configurados  Test-3
@@ -54,8 +47,6 @@ bloque = 200
 
 Porcentaje de uso de CPU :  12.9
 RAM memory % usada: 64.4
-Ram memory usada por PYTHON: 88.73828125  MB
-
 {
     "cantidad": 2000,
     "mensaje": "Ok",
@@ -65,4 +56,3 @@ Ram memory usada por PYTHON: 88.73828125  MB
 
 Porcentaje de uso de CPU :  13.8
 RAM memory % usada: 66.0
-Ram memory usada por PYTHON: 412.4140625  MB
